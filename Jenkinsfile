@@ -1,4 +1,10 @@
 pipeline {
+    agent { 
+        node { 
+            label 'ssh Test' 
+            
+        } 
+    } 
     stages {
         stage('Build') {
             steps {
@@ -7,7 +13,7 @@ pipeline {
         }
     stage('Checkout') {
             steps {
-		git branch: 'Test', url: 'https://github.com/jenguvictoria/JenkinsPipeline'           
+                git branch: 'Test', url: 'https://github.com/jenguvictoria/JenkinsPipeline' 
             }
         }    
         stage('Test') {
@@ -16,15 +22,11 @@ pipeline {
             }
         }
         stage('Deploy') {
-        agent { 
-          node { 
-            label 'ssh Test' 
-        } 
-        steps {
-            echo 'Deploying....'
+            steps {
+                echo 'Deploying....'
             }
-        } 
-            
         }
     }
 }
+
+
