@@ -1,6 +1,9 @@
 pipeline {
-    agent any
-
+     agent { 
+        node { 
+            label 'ssh Test'       
+        } 
+    } 
     stages {
         stage('Build') {
             steps {
