@@ -1,8 +1,7 @@
 pipeline {
     agent { 
         node { 
-            label 'ssh Dev' 
-            
+            label 'ssh Dev'             
         } 
     } 
     stages {
