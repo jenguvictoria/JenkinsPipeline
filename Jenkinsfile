@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node { 
-            label 'ssh Test' 
+            label 'ssh Dev' 
         } 
     } 
     stages {
@@ -12,7 +12,7 @@ pipeline {
         }
     stage('Checkout') {
             steps {
-                git'https://github.com/jenguvictoria/JenkinsPipeline' 
+                git branch: 'Dev', url: 'https://github.com/jenguvictoria/JenkinsPipeline' 
             }
         }    
         stage('Test') {
