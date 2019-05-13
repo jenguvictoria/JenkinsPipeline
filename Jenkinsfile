@@ -2,7 +2,6 @@ pipeline {
     agent { 
         node { 
             label 'ssh Test' 
-            
         } 
     } 
     stages {
@@ -28,5 +27,4 @@ pipeline {
         }
     }
 }
-
 
