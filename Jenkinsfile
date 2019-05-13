@@ -12,7 +12,7 @@ pipeline {
         }
     stage('Checkout') {
             steps {
-                git branch: 'Test', url: 'https://github.com/jenguvictoria/JenkinsPipeline' 
+                git'https://github.com/jenguvictoria/JenkinsPipeline' 
             }
         }    
         stage('Test') {
