@@ -2,7 +2,6 @@ pipeline {
     agent { 
         node { 
             label 'ssh Dev' 
-            
         } 
     } 
     stages {
@@ -28,3 +27,4 @@ pipeline {
         }
     }
 }
+
